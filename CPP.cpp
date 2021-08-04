@@ -1,75 +1,35 @@
 #include <iostream>
 #include <iterator>
-#include <vector>
-#include <deque>
-#include <list>
-#include <forward_list>
+#include <set>
+#include <map>
 using namespace std;
-/*
-// 벡터 Main
-int main () {
-    vector<int> vI = { 10, 20, 30 };
-    cout << "Current vector size : " << vI.size() << endl;
 
-    vI.push_back(40);
-    // iterator 사용, 벡터의 요소 뽑아 냄
-    cout << "Current vector size : " << vI.size() << endl << "Current vector elements : ";
-    for (vector<int>::iterator it = vI.begin(); it != vI.end(); it++)
-        cout << *it << " ";
-    cout << endl;
-
-    // 벡터의 요소 뽑아 냄
-    copy(vI.begin(), vI.end(), ostream_iterator<int>(cout, " "));
-}
-
-// Deque Main
+// set Main
 int main() {
-    deque<int> dq = { 20 };
-    dq.push_back(30);
-    dq.push_front(10);
+    int arr[] = { 10, 20, 30, 40, 50 };
+    set<int> st(arr, arr + 3);
+    set<int>::iterator it;
 
-    cout << "Current deque elements : ";
-    for (deque<int>::iterator it = dq.begin(); it != dq.end(); it++)
+    cout << "현재 집합의 모든 요소 : ";
+    for (it = st.begin(); it != st.end(); it++)
         cout << *it << " ";
-    cout << endl;
 
-    dq.pop_back();
-    dq.pop_front();
-    cout << "Current deque elements : ";
-    for (deque<int>::iterator it = dq.begin(); it != dq.end(); it++)
-        cout << *it << " ";
-    cout << endl;
+    st.insert(60);
+    st.insert(70);
+    st.erase(30);
+    cout << endl << "현재 집합의 모든 요소 : ";
+    copy(st.begin(), st.end(), ostream_iterator<int>(cout, " "));
+}
+/*
+// map Main
+int main() {
+    map<string, int> mp;
+    map<string, int>::iterator it;
+    mp.insert(pair<string, int>("국어", 80));
+    mp["수학"] = 100;
 
-    dq.at(0) = 10;
-    cout << "Use at method " << dq[0] << endl;
+    cout << "현재 맵의 모든 요소 : ";
+    for (it = mp.begin(); it != mp.end(); it++)
+        cout << it->first << " : " << it->second << endl;
 }
 */
-// Forward_list Main
-int main() {
-    forward_list<int> fls01 = { 10, 20, 400, 30 };
-    forward_list<int> fls02 = { 40, 50 };
-    forward_list<int>::iterator it;
-
-    cout << "Current forward_list fls01 elements : ";
-    for (it = fls01.begin(); it != fls01.end(); it++)
-        cout << *it << " ";
-    cout << endl;
-
-    cout << "Current forward_list fls02 elements : ";
-    for (it = fls02.begin(); it != fls02.end(); it++)
-        cout << *it << " ";
-    cout << endl;
-
-    it = fls01.begin();
-    fls01.splice_after(it, fls02);
-
-    cout << "Current forward_list fls01 elements : ";
-    for (it = fls01.begin(); it != fls01.end(); it++)
-        cout << *it << " ";
-    cout << endl;
-
-    cout << "Current forward_list fls02 elements : ";
-    for (it = fls02.begin(); it != fls02.end(); it++)
-        cout << *it << " ";
-    cout << endl;
-}
