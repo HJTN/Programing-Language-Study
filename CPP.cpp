@@ -16,5 +16,7 @@ int main()
     temp->num = 100;
     cout << temp->doub << " " << temp->num << endl;
 
+    cin >> temp->x >> temp->str;
+    cout << temp->x << " " << temp->str << endl;
     delete temp;
 }
