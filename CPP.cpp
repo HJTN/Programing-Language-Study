@@ -20,7 +20,7 @@ int main () {
     // 벡터의 요소 뽑아 냄
     copy(vI.begin(), vI.end(), ostream_iterator<int>(cout, " "));
 }
-
+/*
 // Deque Main
 int main() {
     deque<int> dq = { 20 };
@@ -72,3 +72,4 @@ int main() {
         cout << *it << " ";
     cout << endl;
 }
+*/
