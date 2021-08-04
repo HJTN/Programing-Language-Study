@@ -7,7 +7,7 @@ typedef struct node {
     int num;
     double doub;
     char x;
-} ;
+} node;
 
 int main()
 {
