@@ -1,16 +1,20 @@
 #include <iostream>
 using namespace std;
 
-namespace temp {
-    int val = 50;
-    int getVal() {
-        return val * 10;
-    }
-}
+typedef struct node* nodePointer;
+typedef struct node {
+    string str;
+    int num;
+    double doub;
+    char x;
+} ;
 
 int main()
 {
-    double val = 10.0;
-    cout << val << endl;    // prints 10.0
-    cout << temp::getVal() << endl;     // prints 500
+    nodePointer temp = new node;
+    temp->doub = 9.2;
+    temp->num = 100;
+    cout << temp->doub << " " << temp->num << endl;
+
+    delete temp;
 }
