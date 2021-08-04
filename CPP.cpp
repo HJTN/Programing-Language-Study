@@ -1,22 +1,16 @@
 #include <iostream>
+#include <list>
 using namespace std;
-
-typedef struct node* nodePointer;
-typedef struct node {
-    string str;
-    int num;
-    double doub;
-    char x;
-} node;
 
 int main()
 {
-    nodePointer temp = new node;
-    temp->doub = 9.2;
-    temp->num = 100;
-    cout << temp->doub << " " << temp->num << endl;
+    list<int> ls = { 10, 20, 30 };
+    ls.push_back(100);
+    ls.push_front(3);
 
-    cin >> temp->x >> temp->str;
-    cout << temp->x << " " << temp->str << endl;
-    delete temp;
+    list<int>::iterator iter = ls.begin();
+    *iter = 5;      // list[0] = 5;
+
+    for (iter = ls.begin(); iter != ls.end(); iter++)
+        cout << *iter << " ";
 }
