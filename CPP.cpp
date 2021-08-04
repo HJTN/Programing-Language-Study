@@ -1,8 +1,16 @@
 #include <iostream>
 using namespace std;
 
+namespace temp {
+    int val = 50;
+    int getVal() {
+        return val * 10;
+    }
+}
+
 int main()
 {
-    int a = 2;
-    cout << a << endl;
+    double val = 10.0;
+    cout << val << endl;    // prints 10.0
+    cout << temp::getVal() << endl;     // prints 500
 }
