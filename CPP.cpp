@@ -21,7 +21,7 @@ int main () {
     // 벡터의 요소 뽑아 냄
     copy(vI.begin(), vI.end(), ostream_iterator<int>(cout, " "));
 }
-*/
+
 // Deque Main
 int main() {
     deque<int> dq = { 20 };
@@ -41,9 +41,9 @@ int main() {
     cout << endl;
 
     dq.at(0) = 10;
-    cout << "Use at method" << dq[0] << endl;
+    cout << "Use at method " << dq[0] << endl;
 }
-/*
+*/
 // Forward_list Main
 int main() {
     forward_list<int> fls01 = { 10, 20, 400, 30 };
@@ -73,4 +73,3 @@ int main() {
         cout << *it << " ";
     cout << endl;
 }
-*/
