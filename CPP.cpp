@@ -14,7 +14,7 @@ class Book {
 };
 
 int main() {
-    Book webBook("CPP 생성자", 350);
+    Book webBook("CPP Constructor", 350);
 
     webBook.Move(30);
     cout << webBook.currentPage << endl;
