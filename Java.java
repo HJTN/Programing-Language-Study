@@ -1,19 +1,28 @@
-class Test {
-    int field;
-    String field2;
+class Car {
 
-    public void method1() {
-        System.out.println("Java practicing file");
+    private String modelName;
+    private int modelYear;
+    private String color;
+    private int maxSpeed;
+    private int currentSpeed;
+ 
+    Car(String modelName, int modelYear, String color, int maxSpeed) {
+        this.modelName = modelName;
+        this.modelYear = modelYear;
+        this.color = color;
+        this.maxSpeed = maxSpeed;
+        this.currentSpeed = 0;
     }
+
+    public String getModel() {
+        return this.modelYear + "year " + this.modelName + " " + this.color;
+    }
+
 }
 
 public class Java {
     public static void main(String[] args) {
-        int[] arr1 = new int[] { 1, 2, 3, 4, 5 };
-        int sum = 0;
-        // Enhanced for문
-        for (int tp : arr1)
-            sum += tp;
-        System.out.print(sum);
+        Car myCar = new Car("Abante", 2016, "White", 200);
+        System.out.println(myCar.getModel());
     }
 }
