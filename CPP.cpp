@@ -27,7 +27,8 @@ int main() {
     map<string, int>::iterator it;
     mp.insert(pair<string, int>("math", 80));
     mp["english"] = 100;
-    mp.insert(pair<string, int>("writing", 90));
+    mp["writing"] = 90;
+    // mp.insert(pair<string, int>("writing", 90));
 
     cout << "Current map elements : ";
     for (it = mp.begin(); it != mp.end(); it++)
