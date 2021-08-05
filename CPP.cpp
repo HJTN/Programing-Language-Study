@@ -10,7 +10,7 @@ int main() {
     set<int> st(arr, arr + 3);
     set<int>::iterator it;
 
-    cout << "Current set elements : ";
+    cout << "현재 집합의 모든 요소 : ";
     for (it = st.begin(); it != st.end(); it++)
         cout << *it << " ";
 
