@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "Programing Language Study_6c3c678b"
+        },
+        {
+            "type": "java",
+            "name": "Launch prog",
+            "request": "launch",
+            "mainClass": "prog",
+            "projectName": "Programing Language Study_6c3c678b"
+        },
+        {
             "name": "g++.exe - 활성 파일 빌드 및 디버그",
             "type": "cppdbg",
             "request": "launch",
