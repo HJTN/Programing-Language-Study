@@ -3,7 +3,7 @@
 #include <set>
 #include <map>
 using namespace std;
-
+/*
 // set Main
 int main() {
     int arr[] = { 10, 20, 30, 40, 50 };
@@ -20,7 +20,7 @@ int main() {
     cout << endl << "Current set elements : ";
     copy(st.begin(), st.end(), ostream_iterator<int>(cout, " "));
 }
-/*
+*/
 // map Main
 int main() {
     map<string, int> mp;
@@ -32,4 +32,3 @@ int main() {
     for (it = mp.begin(); it != mp.end(); it++)
         cout << it->first << " : " << it->second << endl;
 }
-*/
