@@ -1,36 +1,51 @@
 #include <iostream>
 #include <iterator>
-#include <set>
-#include <map>
+#include <stack>
+#include <queue>
 using namespace std;
-/*
-// set Main
+
+// stack Main
 int main() {
-    int arr[] = { 10, 20, 30, 40, 50 };
-    set<int> st(arr, arr + 3);
-    set<int>::iterator it;
+    stack<int> st;
+    int decimal = 123;
 
-    cout << "현재 집합의 모든 요소 : ";
-    for (it = st.begin(); it != st.end(); it++)
-        cout << *it << " ";
+    do {
+        st.push(decimal % 2);
+        decimal /= 2;
+    } while (decimal);
 
-    st.insert(60);
-    st.insert(70);
-    st.erase(30);
-    cout << endl << "Current set elements : ";
-    copy(st.begin(), st.end(), ostream_iterator<int>(cout, " "));
+    while(!st.empty()) {
+        cout << st.top();
+        st.pop();
+    }
+}
+/*
+// queue Main
+int main() {
+    int n = 20;
+    queue<int> que;
+    que.push(0);
+    que.push(1);
+
+    for (int i = 2; i < n; i++) {
+        int temp = que.front();
+        cout << temp << " ";
+        que.pop();
+        que.push(temp + que.front());
+    }
+}
+
+// priority_queue Main
+int main() {
+    priority_queue<int> pq;
+    pq.push(10);
+    pq.push(20);
+    pq.push(100);
+    pq.push(3);
+
+    while(!pq.empty()) {
+        cout << pq.top() << " ";
+        pq.pop();
+    }
 }
 */
-// map Main
-int main() {
-    map<string, int> mp;
-    mp.insert(pair<string, int>("math", 80));
-    mp["writing"] = 90;
-    mp["english"] = 100;
-    // mp.insert(pair<string, int>("writing", 90));
-
-    cout << "Current map elements : ";
-    map<string, int>::iterator it;
-    for (it = mp.begin(); it != mp.end(); it++)
-        cout << it->first << " : " << it->second << endl;
-}
