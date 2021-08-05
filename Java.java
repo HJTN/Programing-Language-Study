@@ -9,11 +9,11 @@ class Test {
 
 public class Java {
     public static void main(String[] args) {
-        int[] arr1 = new int[10];
-        for (int i = 0; i < 10; i++) {
-            arr1[i] = i;
-        }
-        for(int i = 0; i < arr1.length; i++)
-            System.out.print(arr1[i]);
+        int[] arr1 = new int[] { 1, 2, 3, 4, 5 };
+        int sum = 0;
+        // Enhanced for문
+        for (int tp : arr1)
+            sum += tp;
+        System.out.print(sum);
     }
 }
