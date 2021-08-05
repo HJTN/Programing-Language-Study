@@ -9,7 +9,11 @@ class Test {
 
 public class Java {
     public static void main(String[] args) {
-        Test test = new Test();
-        test.method1();
+        int[] arr1 = new int[10];
+        for (int i = 0; i < 10; i++) {
+            arr1[i] = i;
+        }
+        for(int i = 0; i < arr1.length; i++)
+            System.out.print(arr1[i]);
     }
 }
