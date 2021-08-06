@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 class Car {
 
     private String modelName;
@@ -22,7 +24,20 @@ class Car {
 
 public class Java {
     public static void main(String[] args) {
-        Car myCar = new Car("Abante", 2016, "White", 200);
-        System.out.println(myCar.getModel());
+        LinkedList<String> qu = new LinkedList<String>();
+
+        qu.add("Four");
+        qu.add("Two");
+        qu.add("Three");
+        qu.add("One");
+
+        System.out.println(qu.peek());
+        System.out.println(qu);
+
+        System.out.println(qu.poll());
+        System.out.println(qu);
+
+        qu.remove("One");
+        System.out.println(qu);
     }
 }
