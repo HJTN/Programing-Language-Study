@@ -1,43 +1,25 @@
-import java.util.LinkedList;
+interface Animal {
+    public abstract void cry();
+}
 
-class Car {
-
-    private String modelName;
-    private int modelYear;
-    private String color;
-    private int maxSpeed;
-    private int currentSpeed;
- 
-    Car(String modelName, int modelYear, String color, int maxSpeed) {
-        this.modelName = modelName;
-        this.modelYear = modelYear;
-        this.color = color;
-        this.maxSpeed = maxSpeed;
-        this.currentSpeed = 0;
+class Cat implements Animal {
+    public void cry() {
+        System.out.println("miyaong~");
     }
+}
 
-    public String getModel() {
-        return this.modelYear + "year " + this.modelName + " " + this.color;
+class Dog implements Animal {
+    public void cry() {
+        System.out.println("wangwang!!");
     }
-
 }
 
 public class Java {
     public static void main(String[] args) {
-        LinkedList<String> qu = new LinkedList<String>();
+        Cat c = new Cat();
+        Dog d = new Dog();
 
-        qu.add("Four");
-        qu.add("Two");
-        qu.add("Three");
-        qu.add("One");
-
-        System.out.println(qu.peek());
-        System.out.println(qu);
-
-        System.out.println(qu.poll());
-        System.out.println(qu);
-
-        qu.remove("One");
-        System.out.println(qu);
+        c.cry();
+        d.cry();
     }
 }
