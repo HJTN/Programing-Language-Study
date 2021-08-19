@@ -36,3 +36,12 @@ console.log(add(3, 5));
 1. tsc (확장자가 ts인 파일이름 (ex. app.ts, ... 등))
 2. tsc --init : ts 실행 후 돌아왔을 때 함수에 오류 발생 시 입력(vs code 오류)
 3. tsc -w : typescript compiler가 변경된 ts 파일 감시 -> 변경 내용을 자동으로 컴파일
+
+4. Type Inference
+-> let a = 5;에서 a변수에 5를 할당하는 순간 type 추론에 의해 a의 type이 number로 인식됨
+-> ☆ type 표기가 없는 경우, 코드를 읽고 분석하여 타입 유추
+function calculateCodingIQ(lostPoints) {
+    return 100 - lostPoints;
+}
+-> 매개변수의 type이 어떻든 간에 function의 반환값이 number라는 것을 type 추론을 통해 알아냄
+
