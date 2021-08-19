@@ -1,0 +1,27 @@
+Type Script
+-> 버그 줄임
+-> 쉬운 유지 보수
+-> 질 좋은 코드
+
+※ Java Script 기반으로한 언어
+-> 자바 스크립트의 모든 기능 포함
++
+자바 스크립트에 포함되지 않은 기능 포함
+= Type Script
+
+☆ Java Script보다 강력한 upgrade된 java script라고 생각
+☆ Type Script 특징
+1. 타입 표기 : 변수 값에 데이터 타입 지정 가능
+Ex)
+function add (a: number, b: number) {
+	return a+b;
+}
+console.log(add(3, 5));
+2. 객체지향적
+3. 컴파일 타임 오류
+
+# 컴파일 : 어떤 언어의 코드 -> 다른 언어로 변환 과정
+--> TS → JS
+
+4. 프로그래밍 언어인 동시에 컴파일러, TS -> JS
+5. 
