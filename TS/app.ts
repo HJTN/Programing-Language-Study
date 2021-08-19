@@ -1,8 +1,10 @@
-let student = {
-    name: 'Heo',
-    course: 'Getting Started with TypeScript',
-    codingIQ: 100,
-    code: function () {
-        console.log('Brain is working hard');
-    }
+let studentID: number = 12345;
+let studentName: string = 'HeoJinSu';
+let age: number = 21;
+let gender: string = 'male';
+let subject: string = 'C++, Java, etc';
+let courseCompleted: boolean = false;
+
+function getStudentDetails(studentID: number): string {
+    return '';
 }

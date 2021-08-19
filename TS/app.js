@@ -1,8 +1,9 @@
-var student = {
-    name: 'Heo',
-    course: 'Getting Started with TypeScript',
-    codingIQ: 100,
-    code: function () {
-        console.log('Brain is working hard');
-    }
-};
+var studentID = 12345;
+var studentName = 'HeoJinSu';
+var age = 21;
+var gender = 'male';
+var subject = 'C++, Java, etc';
+var courseCompleted = false;
+function getStudentDetails(studentID) {
+    return '';
+}
