@@ -90,4 +90,4 @@ interface student {
 	addComment?: (comment: string) => string;
 }
 
--> Read Only Property : 읽기 전용 프로퍼티, 객체 생성시 할당된 프로퍼티의 값을 바꿀 수 없음
+-> Read Only Property : 읽기 전용 프로퍼티, 객체 생성시 할당된 프로퍼티의 값을 바꿀 수 없음 (c언어의 const와 비슷)
