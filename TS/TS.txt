@@ -24,4 +24,15 @@ console.log(add(3, 5));
 --> TS → JS
 
 4. 프로그래밍 언어인 동시에 컴파일러, TS -> JS
-5. 
+
+# TS Download
+-> NPM (Node Package Manager) : 타입스크립트를 설치하기 위해 사용되는 도구
+-> NPM은 Node JS의 한 부분 = Node JS 설치 필요
+-> npm install -g typescript
+	 : Type Script Compiler
+	 -> tsc(TypeScript Compiler) 명령어를 사용해서 TS를 JS로 변환 가능
+
+# TS 작성
+1. tsc (확장자가 ts인 파일이름 (ex. app.ts, ... 등))
+2. tsc --init : ts 실행 후 돌아왔을 때 함수에 오류 발생 시 입력(vs code 오류)
+3. tsc -w : typescript compiler가 변경된 ts 파일 감시 -> 변경 내용을 자동으로 컴파일
