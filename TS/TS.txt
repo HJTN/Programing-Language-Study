@@ -91,3 +91,14 @@ interface student {
 }
 
 -> Read Only Property : 읽기 전용 프로퍼티, 객체 생성시 할당된 프로퍼티의 값을 바꿀 수 없음 (c언어의 const와 비슷)
+ex)
+interface student {
+    readonly studentID: number;
+    studentName: string;
+    age?: number;
+    gender: string;
+    subject: string;
+    courseCompleted: boolean;
+	addComment?(comment: string): string;		// 선택적 메소드
+	addComment?: (comment: string) => string;
+}
