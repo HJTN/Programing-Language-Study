@@ -45,7 +45,7 @@ function calculateCodingIQ(lostPoints) {
 }
 -> 매개변수의 type이 어떻든 간에 function의 반환값이 number라는 것을 type 추론을 통해 알아냄
 
-5. Type 명시 : 변수 선언 시, 변수 값의 type 명시 -> 변수 값의 데이터 타입 지정
+5. Type Specification(명시) : 변수 선언 시, 변수 값의 type 명시 -> 변수 값의 데이터 타입 지정
 ※ Syntax
 Ex 1) let x:(type 명시시 콜론 필요) string(type) = '문자열'(value);
 Ex 2) function getStudentDetails(studentID: para_Type): (type) { content }
@@ -61,3 +61,33 @@ function getStudentDetails(studentID: number): {
 } {
 	content...
 }
+
+6. Interface
+-> 5번 특성에서 사용한 object 구조 방식을 따로 정의하여 type으로 사용
+-> 인터페이스를 타입으로 가지면, 인터페이스의 구조를 그 값으로 가지도록 강제됨
+ex) 
+interface student {
+    studentID: number;
+    studentName: string;
+    age?: number;
+    gender: string;
+    subject: string;
+    courseCompleted: boolean;
+}
+※ age?: number; → age 뒤의 ?로 object 구조에서 age를 선택적 프로퍼티로 만듦
+ == 함수 값을 리턴할 때 age에 값을 할당해도 되고 안 해도 됨
+
+ -> method : 객체 내에서 선언된 함수 → 인터페이스 내에서 쓸 수 있음
+ ex) 
+ interface student {
+    studentID: number;
+    studentName: string;
+    age?: number;
+    gender: string;
+    subject: string;
+    courseCompleted: boolean;
+	addComment?(comment: string): string;		// 선택적 메소드
+	addComment?: (comment: string) => string;
+}
+
+-> Read Only Property : 읽기 전용 프로퍼티, 객체 생성시 할당된 프로퍼티의 값을 바꿀 수 없음
