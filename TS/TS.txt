@@ -119,3 +119,18 @@ enum genderTypeString {     // string enum
     genderNeutral = 'genderneutral',
 }
 -> String Enum (문자열 열거형)
+
+2) Literal Type : |(파이프) 로 property 값 구분
+ex)
+interface student {
+    readonly studentID: number,
+    studentName: string,
+    age?: number,
+    gender: 'male' | 'female' | 'genderNeutral',	// Literal type
+    subject: string,
+    courseCompleted: boolean,
+    addComment?(comment: string): string,
+    addComment?: (Comment: string) => string;
+};
+-> 객체의 변수 선언 시 : student를 붙여줘야함
+-> string으로 type 유추함으로 인해 오류 발생함

@@ -5,23 +5,11 @@ let gender: string = 'male';
 let subject: string = 'C++, Java, etc';
 let courseCompleted: boolean = false;
 
-enum genderType {           // numeric enum
-    Male,           // Male = 0
-    Female,         // Female = 1
-    genderNeutral   // genderNeutral = 2
-}
-
-enum genderTypeString {     // string enum
-    Male = 'male',
-    Female = 'female',
-    genderNeutral = 'genderneutral',
-}
-
-let student1 = {
+let student1: student = {
     studentID: 121212,
     studentName: 'Jack',
     age: 28,
-    gender: genderTypeString.Male,
+    gender: 'male',
     subject: 'Mongo DB',
     courseCompleted: false
 };
@@ -30,7 +18,7 @@ interface student {
     readonly studentID: number,
     studentName: string,
     age?: number,
-    gender: genderTypeString,
+    gender: 'male' | 'female' | 'genderNeutral',        // Literal type
     subject: string,
     courseCompleted: boolean,
     addComment?(comment: string): string,
@@ -42,7 +30,7 @@ function getStudentDetails(studentID: number): student
     return {
         studentID: 12345,
         studentName: 'HeoJinSu',
-        gender: genderTypeString.Male,
+        gender: 'male',
         subject: 'C++, Java, etc',
         courseCompleted: false
     };
