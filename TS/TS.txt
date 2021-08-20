@@ -90,7 +90,7 @@ interface student {
 	addComment?: (comment: string) => string;
 }
 
--> Read Only Property : 읽기 전용 프로퍼티, 객체 생성시 할당된 프로퍼티의 값을 바꿀 수 없음 (c언어의 const와 비슷)
+-> ReadOnly Property : 읽기 전용 프로퍼티, 객체 생성시 할당된 프로퍼티의 값을 바꿀 수 없음 (c언어의 const와 비슷)
 ex)
 interface student {
     readonly studentID: number;
@@ -102,3 +102,20 @@ interface student {
 	addComment?(comment: string): string;		// 선택적 메소드
 	addComment?: (comment: string) => string;
 }
+
+7. Enum (열거형) & Literal Type
+1) Enum : 연관된 item들을 함께 묶어서 표현
+ex 1)
+enum genderType {
+    Male,           // Male = 0
+    Female,         // Female = 1
+    genderNeutral   // genderNeutral = 2
+}
+-> Numeric Enum (숫자 열거형)
+ex 2)
+enum genderTypeString {     // string enum
+    Male = 'male',
+    Female = 'female',
+    genderNeutral = 'genderneutral',
+}
+-> String Enum (문자열 열거형)
