@@ -134,3 +134,36 @@ interface student {
 };
 -> 객체의 변수 선언 시 : student를 붙여줘야함
 -> string으로 type 유추함으로 인해 오류 발생함
+
+8. Any Type, Union Type, Type Aliases, Type Guards
+1) Any Type : 어떤 type의 값이든 변수에 할당 가능
+ex)
+let someValue: any = 5;
+someValue = 'hello';
+someValue = true;
+-> 오류 발생 X
+※ 코드의 유지 보수를 위해 any 타입은 피하는 것이 좋다!
+
+2) Union Type : 제한된 타입들을 동시에 지정
+-> |(파이프)로 타입 구분만 하면 됨
+ex)
+let someValue: number | string
+-> someValue는 숫자 혹은 문자열만 값으로 지정 가능
+
+3) Type Aliases : 반복되는 union type 등을 하나의 타입으로 새로 지정하고 재활용
+ex)
+type strOrNum = number | string;
+
+4) Type Guards : 
+	union type을 쓰는 변수와 union type 중 하나의 type을 쓰는 변수 
+	둘 사이에 데이터 이동이 있을 때 오류 발생을 막기 위해 사용
+-> typeof Operator(연산자)와 조건문 사용
+-> typeof Operator : 변수의 데이터 타입을 반환하는 연산자
+ex)
+// price의 type : string | number, itemPrice의 type : number일 때
+if (typeof price === 'string') {    // price 타입이 string일 경우
+	itemPrice = 0;
+}
+else {	// price 타입이 number일 경우
+	itemPrice = price;
+}
