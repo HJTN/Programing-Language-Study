@@ -226,3 +226,49 @@ class Employee {
 // Class Instance
 let employee1 = new Employee();
 employee1.printEmployeeDetails();
+
+11. Constructor (생성자), Access Modifiers (접근 제한자), Getter & Setter
+1) Constructor : 객체를 생성할 때 호출되는 함수 (객체의 초기화 담당)
+-> 객체 생성 시, Constructor에 정의된 parameter의 값이 arguments로 전달 되어야 함!
+ex)
+constructor(fullName: string, age: number, jobTitle: string,
+hourlyRate:number, workingHoursPerWeek:number) {
+	this.fullName = fullName;
+	this.age = age;
+	this.jobTitle = jobTitle;
+	this.hourlyRate = hourlyRate;
+	this.workingHoursPerWeek = workingHoursPerWeek;
+}
+
+2) Access Modifiers : 클라스 속 멤버 변수 (프로퍼티)와 메소드에 적용
+-> 클라스 외부로부터의 접근을 통제 (버그 감소, 코드의 안정성 향상)
+-> public(클라스 외부 접근 O), private(클라스 외부 접근 X), protected(클라스 내부, 상속받은 자식 클라스에서 접근 O)
+-> public 키워드는 반드시 명시할 필요 없음 (기본 키워드)
+ex)
+private fullName: string;
+
+3) Getter & Setter
+-> class 내에 get과 set 키워드 사용
+※ private _변수이름 -> 비공개 변수임을 나타낼 때, 변수 앞에 _를 씀
+ex)
+get fullName() {
+	return this._fullName;
+}
+
+set fullName(value: string) {
+	this._fullName = value;
+}
+// 위의 getter와 setter 사용 예제
+employee1.fullName = 'Henry'
+console.log(employee1.fullName);
+
+4) Constructor와 Access Modifiers
+constructor(
+	private _fullName: string,
+	private _age: number,
+	private _jobTitle: string,
+	private _hourlyRate: number,
+	public workingHoursPerWeek: number) {
+}
+-> 객체 생성 시, constructor의 매개변수로 전달된 값이 객체의 프로퍼티 값으로 
+	자동으로 그 값이 초기화되고 할당됨
