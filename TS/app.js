@@ -1,10 +1,8 @@
-var itemPrice;
-var setItemPrice = function (price) {
-    if (typeof price === 'string') { // price Ÿ���� string�� ���
-        itemPrice = 0;
-    }
-    else {
-        itemPrice = price;
-    }
+var sendGreeting = function (message, userName) {
+    if (message === void 0) { message = 'Hello'; }
+    if (userName === void 0) { userName = 'there'; }
+    return console.log(message + ", " + userName);
 };
-setItemPrice(50);
+sendGreeting();
+sendGreeting('Good morning');
+sendGreeting('Good morning', 'JinSu');
