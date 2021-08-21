@@ -18,7 +18,7 @@ class Employee {
     }
 
     printEmployeeDetails = (): void => {
-        console.log(`${this._fullName}ÀÇ Á÷¾÷Àº ${this._jobTitle}ÀÌ°í ¼öÀÍÀº ${this._hourlyRate * this.workingHoursPerWeek}´Ş·¯ ÀÌ´Ù.`);
+        console.log(`${this._fullName}ì˜ ì§ì—…ì€ ${this._jobTitle}ì´ê³  ìˆ˜ìµì€ ${this._hourlyRate * this.workingHoursPerWeek}ë‹¬ëŸ¬ ì´ë‹¤.`);
     }
 }
 

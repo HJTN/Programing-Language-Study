@@ -1,3 +1,4 @@
+"use strict";
 var Employee = /** @class */ (function () {
     function Employee(_fullName, _age, _jobTitle, _hourlyRate, workingHoursPerWeek) {
         var _this = this;
@@ -7,7 +8,7 @@ var Employee = /** @class */ (function () {
         this._hourlyRate = _hourlyRate;
         this.workingHoursPerWeek = workingHoursPerWeek;
         this.printEmployeeDetails = function () {
-            console.log(_this._fullName + "'s job is " + _this._jobTitle + " and revenue of a week is " + _this._hourlyRate * _this.workingHoursPerWeek + "$");
+            console.log(_this._fullName + "\uC758 \uC9C1\uC5C5\uC740 " + _this._jobTitle + "\uC774\uACE0 \uC218\uC775\uC740 " + _this._hourlyRate * _this.workingHoursPerWeek + "\uB2EC\uB7EC \uC774\uB2E4.");
         };
     }
     Object.defineProperty(Employee.prototype, "fullName", {
