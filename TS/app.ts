@@ -18,7 +18,7 @@ class Employee {
     }
 
     printEmployeeDetails = (): void => {
-        console.log(`${this._fullName}'s job is ${this._jobTitle} and revenue of a week is ${this._hourlyRate * this.workingHoursPerWeek}$`);
+        console.log(`${this._fullName}의 직업은 ${this._jobTitle}이고 수익은 ${this._hourlyRate * this.workingHoursPerWeek}달러 이다.`);
     }
 }
 
