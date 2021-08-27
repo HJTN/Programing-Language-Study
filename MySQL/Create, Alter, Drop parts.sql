@@ -12,10 +12,11 @@ use test;
 
 # Table 생성
 /* CREATE TABLE {원하는 테이블 이름} ( 
-	필드명1 타입,
-    필드명2 타입,
-    ...
-);*/
+	필드명1 타입(자리수) 조건,
+    필드명2 타입 조건,
+    ...,
+    PRIMARY KEY(위의 필드명 중 하나)
+); */
 create table test1 (
 	id varchar(10),
     pw varchar(10),
