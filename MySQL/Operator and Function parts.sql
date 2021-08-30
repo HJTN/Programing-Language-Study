@@ -11,7 +11,7 @@
 
 # 흐름 제어
 /* 1. CASE
-- Grammer
+- Grammar
 First.	CASE {value}
 		WHEN {compare_value} THEN {result}
         WHEN {compare_value} THEN {result}
@@ -27,17 +27,17 @@ Second. CASE
 ※ ELSE 부분이 없으면 NULL 반환 */
 
 /* 2. IF()
-- Grammer
+- Grammar
 IF({condition}, {result1}, {result2})
 condition이 참이면 result1, 아니면 result2 반환 */
 
 /* 3. IFNULL()
-- Grammer
+- Grammar
 IF(expr1, expr2)
 expr1의 값이 NULL이 아니면 expr1 반환, NULL이면 result2 반환 */
 
 /* 4. NULLIF()
-- Grammer
+- Grammar
 NULLIF(expr1, expr2)
 expr1과 expr2의 값이 같으면 NULL, 아니면 expr1 반환 
 - CASE 문으로 동작
@@ -49,7 +49,7 @@ END */
 # 패턴 매칭
 /*	1. LIKE
 -> 특정 패턴을 포함하는 데이터만 검색하기 위해 사용
-- Grammer
+- Grammar
 SELECT * FROM {table명} WHERE {필드명} (NOT) LIKE '창%'; 
 ※ '%' : 0개 이상의 문자라는 의미 (와일드카드 문자), '_' : 1개의 문자 대체 */
 
@@ -66,7 +66,7 @@ SELECT * FROM {table명} WHERE {필드명} (NOT) LIKE '창%';
 8) '[^...]' : 괄호 안에 있지 않은 어떤 문자 의미
 9) '{n}' : 반복되는 횟수 지정
 10) '{m, n}' : 반복되는 횟수의 최소, 최댓값을 지정 
-- Grammer
+- Grammar
 SELECT * FROM {table명} WHERE {필드명} REGEXP '정규 표현식' */
 
 # 타입 변환
@@ -77,12 +77,12 @@ Ex) SELECT BINARY 'a' = 'A'; */
 
 /*	2. CAST()
 -> 인수로 전달받은 값을 명시된 타입으로 변환
-- Grammer
+- Grammar
 CAST(expr AS {type}) */
 
 /*	3. CONVERT()
 -> 첫 번째 인수로 전달받은 값을 두 번째 인수(명시된 타입)으로 변환
-- Grammer
+- Grammar
 CONVERT(expr, type)
 CONVERT(expr USING transcoding_name)
 ※ USING 절 : 서로 다른 문자셋(character set) 간의 데이터 변환을 위해 사용 */
