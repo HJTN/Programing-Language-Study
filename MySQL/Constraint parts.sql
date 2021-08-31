@@ -127,7 +127,7 @@ SELECT * FROM Test2;
     );
     ALTER TABLE {테이블명} ADD/MODIFY COLUMN {필드명} {필드 타입} DEFAULT {기본값};
     ALTER TABLE {테이블명} ALTER {필드명} SET DEFAULT {기본값};
-    ALTER TABLE {테이블명} ALTER {필드명} DROP DEFAULT; */
+    ALTER TABLE {테이블명} ALTER {필드명} DROP DEFAULT; -> 제약조건 삭제*/
 create table test(
 	id int,
     name varchar(20) default 'anonymous',

@@ -72,3 +72,12 @@ from temp;
 # id 필드와 phoneNum 필드에 하나의 별칭 부여
 select name, concat(id, " / ", phoneNum) as idPN
 from temp;
+
+# LIMIT 키워드 사용
+/*	- Grammar
+	SELECT {필드명1, ... 혹은 *} FROM {테이블명} LIMIT {숫자} : 위에서부터 숫자 개수만큼의 자료 보여줌
+    SELECT {필드명1, ... 혹은 *} FROM {테이블명} LIMIT {시작 위치}, {반환 개수} : 시작 위치에서부터 반환 개수만큼의 자료 보여줌
+    ※ 시작 위치의 경우, 0부터 시작함 -> 3번째 위치부터 시작하려면 2를 적어줘야됨!! */
+select * from studentList;
+select * from studentList limit 3;
+select * from studentList limit 2, 3;
