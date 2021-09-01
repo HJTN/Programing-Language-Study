@@ -1,0 +1,9 @@
+// request 모듈의 args 변수
+"?var1=val1&var2=val2"같은 URL 파라메터를 
+파싱한 결과값을 사전으로 가지고있음음
+
+// get() 메소드 활용
+위의 사전에서 해당하는 파라미터를 찾아옴
+Ex) name = request.args.get("name", "Guest")
+    workplace = request.args.get("workplace", "None")
+-> get({URL 파라메터의 변수이름}, {기본값})
