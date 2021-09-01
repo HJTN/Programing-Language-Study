@@ -1,0 +1,8 @@
+// Python 3.0 이후부터
+python -m http.server 8080
+
+// Python 2.x 버전에 사용
+python -m SimpleHTTPServer 8080
+
+// ip를 명시하는 경우
+python -m http.server 8080 --bind 127.0.0.1
