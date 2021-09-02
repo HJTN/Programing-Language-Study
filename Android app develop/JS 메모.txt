@@ -29,3 +29,7 @@ function {함수명}({매개변수1}, {매개변수2}, ...) { return temp;}
 -> window.prompt('화면에 출력할 내용');
 ※ 입력한 내용은 문자열로 인식 -> 숫자의 경우 따로 변환할 필요 있음
 ex) var temp = window.prompt("변수에 들어갈 내용을 입력하세요");
+
+- 입력된 문자열 숫자로 변환
+-> parseInt({내용});
+-> parseFloat({내용});
