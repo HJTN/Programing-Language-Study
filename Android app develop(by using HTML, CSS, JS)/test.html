@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Practice!</title>
     <script>
-        window.onload = function(){
-            var v1 = parseInt(window.prompt("v1?"));
-            var v2 = parseInt(window.prompt('v2?'));
-            window.alert(v1 + v2);
-        };
+       window.onload = function() {
+            function hey() {
+                window.alert("hey!");
+            };
+            var button = document.getElementById("mybutton");
+            button.onclick = hey;
+       };
     </script>
 </head>
 <body>
-    <p>JavaScript Example...</p>
+    <input type="button" id="mybutton" />
 </body>
 </html>
