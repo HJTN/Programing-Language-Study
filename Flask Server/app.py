@@ -35,5 +35,9 @@ def information():
 
     return 'Who are you?'
 
+@app.route('/input/<string:name>')
+def printname(name):
+    return f'Hello {name}!'
+
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port=8080)

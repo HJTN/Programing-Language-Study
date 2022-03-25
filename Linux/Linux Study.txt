@@ -1,3 +1,4 @@
+※ vscode - ctrl+shift+a: vim mode 켜기/끄기
 pwd : 현재 장업하고 있는 위치
 ※ / → 최상위 directory
 
